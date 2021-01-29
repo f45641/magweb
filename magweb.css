@@ -1,0 +1,109 @@
+* {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+}
+nav {
+  width: 100%;
+  height: 220px;
+  background-color: #ecedff;
+}
+.navstick {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+.navbox {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 20px;
+  /* display: block; */
+}
+.navboxAdd {
+  display: flex;
+  justify-content: space-between;
+}
+nav figure {
+  width: 150px;
+  margin: 0 auto;
+  /* margin: 0; */
+}
+nav figure img {
+  width: 100%;
+}
+nav ul {
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+nav li {
+  list-style: none;
+  margin: 0 50px;
+}
+nav ul :first-child {
+  margin-left: 0px;
+}
+nav ul :last-child {
+  margin-right: 0;
+}
+nav a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+}
+nav a:before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 30px;
+  background-color: #8da7e5;
+}
+.burgerbutton {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: none;
+}
+.burgerline {
+  width: 40px;
+  height: 3px;
+  background-color: black;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .navbox {
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+  nav ul {
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #dcc9e5;
+    margin: 0;
+    position: absolute;
+    display: none;
+  }
+  nav ul li {
+    margin: 30px auto;
+  }
+  nav ul :first-child {
+    margin-left: auto;
+  }
+  nav ul :last-child {
+    margin-right: auto;
+  }
+  .burgerbutton {
+    display: block;
+  }
+}

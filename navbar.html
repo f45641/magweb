@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="magweb.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="navbox">
+            <figure>
+                <img src="/imges/maglogo.png" alt="">
+            </figure>
+            <div class="burgerbutton">
+                <div class="burgerline line1"></div>
+                <div class="burgerline line2"></div>
+                <div class="burgerline line3"></div>
+            </div>
+            <ul>
+                <li><a href="">多媒體設計</a></li>
+                <li><a href="">平面設計</a></li>
+                <li><a href="">ＣＩＳ設計</a></li>
+                <li><a href="">社群行銷</a></li>
+                <li><a href="">關於ＭＡＧ</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        let scrollLast = 10;
+        $(window).scroll(function () {
+            let scrollNow = $(this).scrollTop();
+
+            if (scrollLast < scrollNow) {
+                $(".navbox").addClass("navboxAdd");
+                $("nav figure").css("margin", "0");
+                $("nav").css("background-color", "white").css("box-shadow", "0 1px 10px rgba(0, 0, 0, 0.5").css("height", "140px").addClass("navstick");
+            }
+            else {
+                $(".navbox").removeClass("navboxAdd");
+                $("nav figure").css("margin", "0 auto");
+                $("nav").css("background-color", "#ecedff").css("box-shadow", "none").css("height", "220px").removeClass("navstick");
+            }
+        })
+
+        $(".burgerbutton").click(function () {
+            // let windowSize = $(this).width();
+            // if (windoeSize < 1280) {}
+            $("nav ul").slideToggle();
+
+            // else {
+            //     $("nav ul").css("display", "block");
+            // }
+        
+        })
+    </script>
+
+</body>
+
+</html>
