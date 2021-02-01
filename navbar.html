@@ -16,24 +16,48 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="navbig">
         <div class="navbox">
             <figure>
-                <img src="/imges/maglogo.png" alt="">
+                <img src="./imges/maglogo.png" alt="">
             </figure>
-            <div class="burgerbutton">
-                <div class="burgerline line1"></div>
-                <div class="burgerline line2"></div>
-                <div class="burgerline line3"></div>
-            </div>
-            <ul>
+            <ul class="nav-content">
                 <li><a href="">多媒體設計</a></li>
                 <li><a href="">平面設計</a></li>
                 <li><a href="">ＣＩＳ設計</a></li>
                 <li><a href="">社群行銷</a></li>
                 <li><a href="">關於ＭＡＧ</a></li>
             </ul>
+        </div>
+    </nav>
 
+    <nav class="navsmall">
+        <div class="navbox2">
+            <figure>
+                <img src="./imges/maglogo.png" alt="">
+            </figure>
+            <div class="burgerbutton">
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+            </div>
+        </div>
+        <div class="navlist">
+            <figure>
+                <img src="./imges/maglogo-w.png" alt="">
+            </figure>
+            <hr>
+            <div class="burgerbutton list-burgerbutton">
+                <div class=" list-btn line1 "></div>
+                <div class=" list-btn line2 "></div>
+            </div>
+            <ul class="nav-content-2">
+                <li><a href="">多媒體設計</a></li>
+                <li><a href="">平面設計</a></li>
+                <li><a href="">ＣＩＳ設計</a></li>
+                <li><a href="">社群行銷</a></li>
+                <li><a href="">關於ＭＡＧ</a></li>
+            </ul>
         </div>
     </nav>
 
@@ -46,26 +70,25 @@
 
             if (scrollLast < scrollNow) {
                 $(".navbox").addClass("navboxAdd");
-                $("nav figure").css("margin", "0");
-                $("nav").css("background-color", "white").css("box-shadow", "0 1px 10px rgba(0, 0, 0, 0.5").css("height", "140px").addClass("navstick");
+                $(".navbig figure").css("margin", "0");
+                $(".navbig").css("background-color", "white").css("box-shadow", "0 1px 10px rgba(0, 0, 0, 0.5)").css("height", "110px").addClass("navstick");
             }
             else {
                 $(".navbox").removeClass("navboxAdd");
-                $("nav figure").css("margin", "0 auto");
-                $("nav").css("background-color", "#ecedff").css("box-shadow", "none").css("height", "220px").removeClass("navstick");
+                $(".navbig figure").css("margin", "0 auto");
+                $(".navbig").css("background-color", "#ecedff").css("box-shadow", "none").css("height", "220px").removeClass("navstick");
             }
         })
-
         $(".burgerbutton").click(function () {
-            // let windowSize = $(this).width();
-            // if (windoeSize < 1280) {}
-            $("nav ul").slideToggle();
-
-            // else {
-            //     $("nav ul").css("display", "block");
-            // }
-        
+            $(".navlist").slideToggle();
+            $(".line1").css("transform", "rotate(45deg)");
+            $(".line2").css("transform", "rotate(-45deg)");
         })
+        $(".list-burgerbutton").click(function () {
+            $(".line1").css("transform", "rotate(0)");
+            $(".line2").css("transform", "rotate(0)");
+        })
+
     </script>
 
 </body>

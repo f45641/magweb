@@ -4,12 +4,18 @@
 body {
   margin: 0;
   padding: 0;
-  height: 2000px;
 }
-nav {
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.navbig {
   width: 100%;
   height: 220px;
-  background-color: #ecedff;
+  background-color: white;
+  display: block;
 }
 .navstick {
   position: fixed;
@@ -21,89 +27,187 @@ nav {
   width: 75%;
   margin: 0 auto;
   padding-top: 20px;
-  /* display: block; */
 }
 .navboxAdd {
   display: flex;
   justify-content: space-between;
 }
-nav figure {
-  width: 150px;
+.navbig figure {
+  width: 100px;
   margin: 0 auto;
-  /* margin: 0; */
 }
-nav figure img {
+.navbig figure img {
   width: 100%;
 }
-nav ul {
+.nav-content {
   font-size: 22px;
   font-weight: 500;
   display: flex;
   justify-content: space-between;
   padding: 0;
 }
-nav li {
-  list-style: none;
-  margin: 0 50px;
+.navbig li {
+  margin: 0 30px;
 }
-nav ul :first-child {
+.nav-content :first-child {
   margin-left: 0px;
 }
-nav ul :last-child {
+.nav-content :last-child {
   margin-right: 0;
 }
-nav a {
-  text-decoration: none;
+.navbig a {
   position: relative;
   color: black;
 }
-nav a:before {
+.navbig a:before {
   content: "";
-  width: 100%;
+  width: 0%;
   height: 4px;
   position: absolute;
   top: 30px;
+  left: 50%;
   background-color: #8da7e5;
+  transition: width 0.5s;
+  transform: translate(-50%);
 }
-.burgerbutton {
-  position: absolute;
-  top: 20px;
-  right: 40px;
+.navbig a:hover:before {
+  content: "";
+  width: 100%;
+}
+
+.navsmall {
+  width: 100%;
+  height: 50px;
+  padding: 15px 0;
+  background-color: white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
   display: none;
 }
+.navbox2 {
+  width: 100%;
+  margin: 0 auto;
+}
+.navbox2 figure {
+  width: 70px;
+  margin: 0 auto;
+}
+.navbox2 figure img {
+  width: 100%;
+}
 .burgerline {
-  width: 40px;
-  height: 3px;
+  width: 30px;
+  height: 1px;
   background-color: black;
-  margin: 10px 0;
+  margin: 8px 0;
+}
+.burgerbutton {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.navlist {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0);
+  padding: 20px 0;
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  display: none;
+}
+.list-burgerbutton {
+  position: fixed;
+  top: 38px;
+  right: 20px;
+}
+.list-btn {
+  width: 30px;
+  height: 1px;
+  background-color: white;
+  margin: 0;
+}
+.line1 {
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s;
+}
+.line2 {
+  transform: translateX(-50%) translateY(-50%);
+  transition: 1s;
+}
+.navlist hr {
+  width: 75%;
+  height: 0.5px;
+  background-color: white;
+  margin: 10px auto;
+}
+.navlist figure {
+  width: 70px;
+  margin: 0 auto;
+}
+.navlist figure img {
+  width: 100%;
+}
+.nav-content-2 {
+  text-align: center;
+  padding: 0;
+  background-color: black;
+}
+.nav-content-2 li {
+  margin: 50px auto;
+  font-size: 22px;
+  font-weight: 500;
+}
+.nav-content-2 li a {
+  color: white;
+}
+
+/* 首頁 */
+
+section {
+  background-color: #ecedff;
+  padding: 100px 0;
+}
+.statellite {
+  width: 250px;
+  position: absolute;
+  top: 50px;
+}
+.sectionA-contain {
+  padding-bottom: 20px;
+}
+.mag {
+  font-size: 78px;
+  line-height: 60px;
+  font-weight: 500;
+}
+.porfolio {
+  font-size: 40px;
+  font-weight: 400;
+}
+.sectionA-contain p {
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 5px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+.about-btn {
+  width: 210px;
+  padding: 16px 0;
+  border-radius: 5px;
+  background-color: #ecedff;
+  box-shadow: 5px 5px 5px rgba(201, 141, 229, 0.45),
+    -5px -5px 5px rgba(255, 255, 255, 0.75);
+  text-align: center;
+  color: #a278b9;
 }
 
 @media screen and (max-width: 1280px) {
-  .navbox {
-    width: 100%;
-    padding: 0;
-    position: relative;
-  }
-  nav ul {
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    background-color: #dcc9e5;
-    margin: 0;
-    position: absolute;
+  .navbig {
     display: none;
   }
-  nav ul li {
-    margin: 30px auto;
-  }
-  nav ul :first-child {
-    margin-left: auto;
-  }
-  nav ul :last-child {
-    margin-right: auto;
-  }
-  .burgerbutton {
+  .navsmall {
     display: block;
   }
 }
