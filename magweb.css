@@ -8,7 +8,8 @@ body {
 li {
   list-style: none;
 }
-a {
+a,
+a:hover {
   text-decoration: none;
 }
 .navbig {
@@ -45,6 +46,7 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0;
+  margin-top: 1rem;
 }
 .navbig li {
   margin: 0 30px;
@@ -70,6 +72,10 @@ a {
   transition: width 0.5s;
   transform: translate(-50%);
 }
+.navbig a:hover {
+  text-decoration: none;
+  color: black;
+}
 .navbig a:hover:before {
   content: "";
   width: 100%;
@@ -77,11 +83,12 @@ a {
 
 .navsmall {
   width: 100%;
-  height: 50px;
+  height: 80px;
   padding: 15px 0;
   background-color: white;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 10px rgb(0 0 0 / 50%);
   display: none;
+  z-index: 30;
 }
 .navbox2 {
   width: 100%;
@@ -170,29 +177,186 @@ section {
 }
 .statellite {
   width: 250px;
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 300px;
+  z-index: 1;
 }
 .sectionA-contain {
   padding-bottom: 20px;
 }
 .mag {
-  font-size: 78px;
+  font-size: 58pt;
   line-height: 60px;
   font-weight: 500;
 }
 .porfolio {
-  font-size: 40px;
+  font-size: 32pt;
   font-weight: 400;
 }
 .sectionA-contain p {
-  font-size: 18px;
+  font-size: 14pt;
   font-weight: 200;
   letter-spacing: 5px;
   line-height: 35px;
   padding: 20px 0;
 }
-.about-btn {
+.index-sectionB {
+  text-align: center;
+}
+.index-title {
+  font-size: 32pt;
+  font-weight: 100;
+  letter-spacing: 80px;
+  text-indent: 80px;
+  text-align: center;
+}
+.bron-year {
+  margin: 40px 0;
+}
+.bron-year span {
+  font-size: 22pt;
+  font-weight: 100;
+  color: black;
+  margin: 0 80px;
+}
+.bron-1988 {
+  font-size: 40pt;
+  color: #a278b9;
+  text-indent: -30px;
+}
+.time-line-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+.timeboxBig {
+  width: 444px;
+}
+.timebox-up {
+  width: 100%;
+  border-bottom: 8px solid #dcc9e5;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+.year {
+  width: 60px;
+  height: 30px;
+  background-color: #a278b9;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 4px;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.year::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 4.5px 0 4.5px;
+  border-color: #a278b9 transparent transparent transparent;
+  position: absolute;
+  bottom: -11px;
+  left: 26px;
+}
+.timebox-dowm {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #a278b9;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.timeboxSmall {
+  width: 222px;
+}
+.skillrow {
+  justify-content: space-between;
+}
+.skill-circle-back {
+  width: 153px;
+  height: 153px;
+  border: 13px solid #ecedff;
+  border-radius: 50%;
+  filter: drop-shadow(5px 5px 5px rgba(201, 141, 229, 0.45));
+  box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.55);
+}
+.skill svg {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  transform: rotate(-90deg);
+}
+.skill-circle {
+  stroke: #a278b9;
+  fill: none;
+  stroke-width: 5px;
+  stroke-dasharray: 332 640;
+  animation: circle-draw 1s;
+}
+@keyframes circle-draw {
+  0% {
+    stroke-dasharray: 0 640;
+  }
+  100% {
+    stroke-dasharray: 332 640;
+  }
+}
+.skill {
+  position: relative;
+  color: #a278b9;
+  margin: 50px 10px;
+}
+.skill span {
+  font-size: 40pt;
+  font-weight: 800;
+  position: absolute;
+  left: 53px;
+  top: 41px;
+}
+.skill h5 {
+  text-align: center;
+  margin: 10px;
+  font-size: 18pt;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+}
+.footerbox {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.footer-left figure {
+  width: auto;
+  height: 90px;
+  color: white;
+}
+.footer-left figure img {
+  height: 100%;
+}
+.footer-left span {
+  font-size: 16pt;
+  margin: 0 30px;
+}
+.footer-right {
+  color: white;
+}
+.contact {
+  width: 100px;
+  height: 25px;
+  background-color: #a278b9;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* .about-btn {
   width: 210px;
   padding: 16px 0;
   border-radius: 5px;
@@ -201,7 +365,7 @@ section {
     -5px -5px 5px rgba(255, 255, 255, 0.75);
   text-align: center;
   color: #a278b9;
-}
+} */
 
 @media screen and (max-width: 1280px) {
   .navbig {
@@ -209,10 +373,15 @@ section {
   }
   .navsmall {
     display: block;
+    position: fixed;
+    top: 0;
   }
 }
-@media screen and (max-width: 990) {
-  .sectionA-contain {
-    flex: -1;
+@media screen and (max-width: 990px) {
+  .index-sectionA .row {
+    flex-direction: column-reverse;
   }
+  /* .sectionA-contain {
+    order: -1;
+  } */
 }

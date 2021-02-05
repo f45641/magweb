@@ -18,7 +18,8 @@
 </head>
 
 <body>
-    <section>
+    <div class="navpage"></div>
+    <section class="index-sectionA">
         <div class="container">
             <div class="statellite">
                 <img src="./imges/satellite.svg" alt="" class="img-fluid">
@@ -32,19 +33,109 @@
                 <div class="col-lg-6">
                     <img class="img-fluid" src="./imges/star.svg" alt="">
                 </div>
-
-                <a href="">
-                    <div class="about-btn align-items-center">
-                        <span>About</span>
-                    </div>
-                </a>
             </div>
+            <!-- <a href="">
+                <div class="about-btn align-items-center">
+                    <span>About</span>
+                </div>
+            </a> -->
         </div>
     </section>
     <section class="index-sectionB">
-
+        <div class="index-title">誕生</div>
+        <div class="bron-year">
+            <p class="bron-1988"><span>西元</span>1988<span>年</span></p>
+        </div>
     </section>
-
+    <section class="index-sectionC">
+        <div class="index-title">經歷</div>
+        <div class="container time-line-group">
+            <div class="timeboxBig">
+                <div class="timebox-up">
+                    <div class="year">2010</div>
+                    <div class="year">2013</div>
+                </div>
+                <div class="timebox-dowm">
+                    <div class="work">遠雄海洋公園<br>動物飼育員</div>
+                    <div class="work">博訊生物科技<br>研究助理</div>
+                </div>
+            </div>
+            <div class="timeboxBig">
+                <div class="timebox-up">
+                    <div class="year">2014</div>
+                    <div class="year">2017</div>
+                </div>
+                <div class="timebox-dowm">
+                    <div class="work">遠雄海洋公園<br>獸醫助理</div>
+                    <div class="work">統聯客運<br>平面設計</div>
+                </div>
+            </div>
+            <div class="timeboxSmall">
+                <div class="timebox-up">
+                    <div class="year">2020</div>
+                </div>
+                <div class="timebox-dowm">
+                    <div class="work">資策會進修<br>UI/UX設計師</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="index-sectionD">
+        <div class="index-title">技能</div>
+        <div class="container">
+            <div class="row skillrow">
+                <div class="skill">
+                    <div class="skill-circle-back"></div>
+                    <span>AI</span>
+                    <svg height="160" width="160">
+                        <circle class="skill-circle" cx="80" cy="80" r="70" />
+                    </svg>
+                    <h5>90%</h5>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle-back"></div>
+                    <span>AI</span>
+                    <svg height="160" width="160">
+                        <circle class="skill-circle" cx="80" cy="80" r="70" />
+                    </svg>
+                    <h5>90%</h5>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle-back"></div>
+                    <span>AI</span>
+                    <svg height="160" width="160">
+                        <circle class="skill-circle" cx="80" cy="80" r="70" />
+                    </svg>
+                    <h5>90%</h5>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle-back"></div>
+                    <span>AI</span>
+                    <svg height="160" width="160">
+                        <circle class="skill-circle" cx="80" cy="80" r="70" />
+                    </svg>
+                    <h5>90%</h5>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle-back"></div>
+                    <span>AI</span>
+                    <svg height="160" width="160">
+                        <circle class="skill-circle" cx="80" cy="80" r="70" />
+                    </svg>
+                    <h5>90%</h5>
+                </div>
+                <div class="skill">
+                    <div class="skill-circle-back"></div>
+                    <span>AI</span>
+                    <svg height="160" width="160">
+                        <circle class="skill-circle" cx="80" cy="80" r="70" />
+                    </svg>
+                    <h5>90%</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footerpage"></div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -55,6 +146,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+
+
+    <!-- 載入檔案 -->
+    <script>
+        $(function () {
+            $(".navpage").load('navbar.html');
+            $(".footerpage").load('footerpage.html');
+        });
+    </script>
 </body>
 
 </html>

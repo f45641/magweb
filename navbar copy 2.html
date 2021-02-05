@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="magweb.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbig">
+        <div class="navbox">
+            <figure>
+                <img src="./imges/maglogo.png" alt="">
+            </figure>
+            <ul class="nav-content">
+                <li><a href="">多媒體設計</a></li>
+                <li><a href="">平面設計</a></li>
+                <li><a href="">ＣＩＳ設計</a></li>
+                <li><a href="">社群行銷</a></li>
+                <li><a href="">關於ＭＡＧ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navsmall">
+        <div class="navbox2">
+            <figure>
+                <img src="./imges/maglogo.png" alt="">
+            </figure>
+            <div class="burgerbutton">
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+                <div class="burgerline"></div>
+            </div>
+        </div>
+        <div class="navlist">
+            <figure>
+                <img src="./imges/maglogo-w.png" alt="">
+            </figure>
+            <hr>
+            <div class="burgerbutton list-burgerbutton">
+                <div class=" list-btn line1 "></div>
+                <div class=" list-btn line2 "></div>
+            </div>
+            <ul class="nav-content-2">
+                <li><a href="">多媒體設計</a></li>
+                <li><a href="">平面設計</a></li>
+                <li><a href="">ＣＩＳ設計</a></li>
+                <li><a href="">社群行銷</a></li>
+                <li><a href="">關於ＭＡＧ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        let scrollLast = 10;
+        $(window).scroll(function () {
+            let scrollNow = $(this).scrollTop();
+
+            if (scrollLast < scrollNow) {
+                $(".navbox").addClass("navboxAdd");
+                $(".navbig figure").css("margin", "0");
+                $(".navbig").css("background-color", "white").css("box-shadow", "0 1px 10px rgba(0, 0, 0, 0.5)").css("height", "110px").addClass("navstick");
+            }
+            else {
+                $(".navbox").removeClass("navboxAdd");
+                $(".navbig figure").css("margin", "0 auto");
+                $(".navbig").css("background-color", "#ecedff").css("box-shadow", "none").css("height", "220px").removeClass("navstick");
+            }
+        })
+        $(".burgerbutton").click(function () {
+            $(".navlist").slideToggle();
+            $(".line1").css("transform", "rotate(45deg)");
+            $(".line2").css("transform", "rotate(-45deg)");
+        })
+        $(".list-burgerbutton").click(function () {
+            $(".line1").css("transform", "rotate(0)");
+            $(".line2").css("transform", "rotate(0)");
+        })
+
+    </script>
+
+</body>
+
+</html>
